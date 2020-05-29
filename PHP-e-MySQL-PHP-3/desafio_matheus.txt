@@ -1,0 +1,105 @@
+# Formulario
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Atividade</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+
+	<body>
+		
+
+		<div class="container">
+			<div class="row">
+				<h1>Catálogo de produtos</h1>
+			</div>
+  			<div class="row">
+    			<div class="col-md-4">
+    				<form role="form" action="aprendendo.php" method="get"><!-- Update -->
+					  <div class="form-group">
+					    <label for="Produto">Nome do produto:</label><br><br>
+					    	Produto:
+					    	<select class="form-control" name="produto" id="produto">
+					    		Produto<option value="4000">TV 50'</option>
+								<option value="1000">Playstation 3</option>
+								<option value="3000">Maquina de lavar</option>
+								<option value="2000">SmartPhone</option>
+					   	</select>
+					   	Pagamento:
+					   	<select class="form-control" name="pagamento" id="pagamento">
+					    		<option value="1">Crédito</option>
+								<option value="2">Débito</option>
+								<option value="3">Dinheiro</option>
+					   	</select>
+					   	Desconto:
+					   	<select class="form-control" name="desconto" id="desconto">
+					    		<option value="1">1%</option>
+								<option value="2">2%</option>
+								<option value="3">3%</option>
+								<option value="4">4%</option>
+								<option value="5">5%</option>
+					   	</select>
+
+					  </div>
+					  <button type="submit" class="btn btn-default">Gerar</button>
+				</form>
+    			</div>
+    			<div class="col-md-4"></div>
+    			<div class="col-md-4"></div>
+  			</div>
+		</div>
+	</body>
+</html>
+
+# Logica
+<?php
+	$produto = $_GET['produto'];
+	$pagamento = $_GET['pagamento'];
+	$desconto = $_GET['desconto'];
+	$descontoTotal = $desconto;
+
+	switch ($produto){
+		case 4000:
+			$produtoNome = 'TV 50';
+			break;
+		case 1000:
+			$produtoNome = 'PlayStation 3';
+			break;
+		case 3000:
+			$produtoNome = 'Maquina de lavar';
+			break;
+		case 2000:
+			$produtoNome = 'Smartphone';
+			break;
+	}
+
+	switch ($pagamento){
+		case 1:
+			$descontoTotal = $descontoTotal + 0;
+			break;
+		case 2:
+			$descontoTotal = $descontoTotal + 5;
+			break;
+		case 3:
+			$descontoTotal = $descontoTotal + 10;
+			break;
+	}
+
+
+	if ($produto>3000){
+		$descontoTotal = $descontoTotal + 5;
+	}
+
+	if ($produto<2000){
+		$descontoTotal = $descontoTotal - $desconto;
+	}
+
+?>
+
+Nome: <?php echo $produtoNome ?> <br>
+Valor Total: R$ <?php echo $produto ?> <br>
+Valor Desconto: R$ <?php echo $descontoTotal ?>% <br>
+Valor Total com Desconto: R$ <?php echo ($produto * (1-($descontoTotal/100))) ?> <br>

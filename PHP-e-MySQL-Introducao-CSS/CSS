@@ -1,0 +1,244 @@
+# CSS
+# Projeto CSS
+
+[inline_style.html]
+
+-> Crie a estrutura básica html
+-> Adicione ao body o seguinte código:
+  <h1>Estilo CSS (Cascading Style Sheets)</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut neque ac nibh scelerisque imperdiet eu facilisis nibh. 
+    Sed non velit ut velit fringilla volutpat sit amet ac libero. Vestibulum semper posuere mi eget fermentum. Sed dignissim 
+    ornare nisl, in varius lorem sagittis sed. Praesent urna dui, sagittis sed ultrices in, consectetur at ante. Nulla facilisi. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis lacus nisl, in feugiat arcu varius nec. Donec tortor 
+    neque, vestibulum in blandit quis, hendrerit in leo. Morbi pellentesque ante vel magna lacinia fringilla. Phasellus facilisis 
+    dapibus ligula, non malesuada nulla maximus feugiat. Sed ut ligula vitae elit pharetra pretium a et metus. Nunc a velit a augue 
+    imperdiet cursus.
+  </p>
+  <p>
+    Vivamus tempus orci at est tincidunt, at efficitur urna dignissim. Class aptent taciti sociosqu ad litora torquent per 
+    conubia nostra, per inceptos himenaeos. Curabitur libero ex, ullamcorper quis leo quis, rutrum venenatis mi. Donec pretium 
+    pharetra lacus in posuere. Suspendisse porta bibendum mattis. Integer at sapien euismod risus faucibus ullamcorper eget 
+    vitae erat. Aenean porta nec purus consequat luctus. Integer id luctus nisl. Maecenas scelerisque facilisis hendrerit. 
+    Mauris a consectetur ligula, vitae dapibus dui. Cras sed tempus sapien. Vivamus gravida maximus massa imperdiet auctor. 
+    Nam rutrum rhoncus leo, in consequat neque consequat quis. Phasellus at ex vitae mauris fermentum pellentesque vitae ut 
+    lorem.
+  </p>
+
+-> Adicione estilos inline na tag <p> mudando a fonte para vermelho
+-> Código com CSS inline, tag <p> com font-color red
+  <h1>Estilo CSS (Cascading Style Sheets)</h1>
+  <p style="color: red;">
+    .
+    .
+    .
+  </p>
+  <p style="color: blue;">
+    .
+    .
+    .
+  </p>
+  
+-> Adicionando borda a tag <p>
+  <h1>Estilo CSS (Cascading Style Sheets)</h1>
+  <p style="color: red; border: 1px solid blue;">
+    .
+    .
+    .
+  </p>
+  <p style="color: blue; border: 1px solid red;">
+    .
+    .
+    .
+  </p>
+  
+-> Outra forma de formatar as tags é através de seletores
+-> Para utilizar essa método adicione dentro da tag <head> a seguinte tag
+  <script type="text/css">
+  </script>
+  
+-> Para trabalhar com classes entre as tags <script> adicionamos as classes com a seguinte sintaxe:
+  .minha-classe
+  {
+    meus atributos: xyz;
+  }
+  
+-> Para trabalhar com IDs entre as tags <script> adicionamos os IDs com a seguinte sintaxe:
+  #meu-id
+  {
+    meus atributos: xyz;
+  }
+
+-> Criar um novo arquivo a partir do arquivo inline_style.html com o nome de span-div.html. 
+-> O conteúdo do arquivo deve ser o seguinte:
+
+  <!doctype html>
+  <html>
+
+	  <head>
+		  <title>Span e Div</title>
+		  <meta charset="utf-8" />
+		
+		  <style type="text/css">
+
+			  #menu{
+				  background-color: gray;
+			  }
+
+			  #conteudo-principal{
+				  background-color: blue;
+			  }
+
+			  #rodape{
+				  border: 1px solid gray;
+			  }
+
+			  .verde{
+				  color: green;
+			  }
+
+		  </style>
+
+	  </head>
+
+	  <body>
+
+		  <div id="menu">
+			  Home | Quem somos | Contato
+		  </div>
+
+		  <div id="conteudo-principal">
+			  <h2>Conteúdo do site</h2>
+			  <p>Conteudo</p>
+		  </div>
+
+		  <div id="rodape">
+			  Todos os <span class="verde">direitos</span> reservados
+		  </div>
+
+
+	  </body>
+
+  </html>
+  
+-> Para trabalhar com bordas, mais uma vez podemos fazê-lo inline ou através de elementos ou através 
+de classes ou através de ids, criamos o arquivos bordas.html com o seguinte conteúdo:
+
+  <!doctype html>
+  <html>
+
+	  <head>
+		  <title>Bordas</title>
+		  <meta charset="utf-8" />
+		
+		  <style type="text/css">
+
+			div {
+				/*border: 10px solid red;*/
+				border-color: red green yellow blue;
+				border-width: 10px 8px 6px 3px;
+				border-style: solid dotted dashed solid;
+			}
+
+		  </style>
+
+	  </head>
+
+	  <body>
+
+		  <div>
+			Conteúdo<br>
+			Conteúdo<br>
+			Conteúdo<br>
+		  </div>
+
+	  </body>
+
+  </html>
+
+-> Trabalhando com fontes e cores usando hexa. Segue código do arquivo fontes-cores.html:
+  <!doctype html>
+  <html>
+
+	<head>
+		<title>Fontes e cores</title>
+		<meta charset="utf-8" />
+		
+		<style type="text/css">
+
+			.vermelho{
+				color: #BD3909;
+				font-size: 30px;
+				font-family: "Trebuchet MS", Helvetica, sans-serif;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<p class="vermelho">Conteúdo</p>
+
+	</body>
+
+  </html>
+
+-> Adicionando formatação ao texto. O código abaixo foi gerado:
+
+  <!doctype html>
+  <html>
+
+	<head>
+		<title>Formatações de textos</title>
+		<meta charset="utf-8" />
+		
+		<style type="text/css">
+			p {
+				font-size: 30px;
+				font-family: "Georgia";
+			}
+
+			.texto{
+				font-size: 20px; /*px, %, em */
+			}
+
+			.negrito{
+				font-weight: bold;/*100 até 900*/
+			}
+
+			.estilo{
+				font-style: italic;
+				/*font-style: oblique;*/
+			}
+
+			.texto-padrao{
+				font: bold 40px "Palatino Linotype", "Book Antiqua", Palatino, serif;
+			}
+
+			.formatacao{
+				/*text-decoration: underline;
+				text-decoration: overline;*/
+				text-decoration: line-through;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<p class="texto">
+			Lorem ipsum <span class="formatacao">dolor</span> sit amet, consectetur adipiscing elit.
+		</p>
+		<p class="negrito">Conteúdo 1</p>
+		<p>Conteúdo 2</p>
+		<p class="estilo">Conteúdo 3</p>
+		<p class="texto-padrao">Conteúdo 4</p>
+
+	</body>
+
+  </html>
+
+-> Dica do Clementino pra escolha de cores:
+   http://erikasarti.net/html/tabela-cores/
